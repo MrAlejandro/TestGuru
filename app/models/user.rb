@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :tests
+  has_many :test_results
   has_many :tests, through: :test_results
 
   def find_test_by_level(level)
