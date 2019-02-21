@@ -33,4 +33,7 @@ advanced_ruby_answers = Answer.create(
   ]
 )
 
-
+TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 0.0)
+TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 33.33, status: :complete)
+TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 55.55, status: :complete)
+TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 77.77, status: :complete)
