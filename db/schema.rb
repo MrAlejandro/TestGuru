@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_19_164255) do
+ActiveRecord::Schema.define(version: 2019_02_21_162326) do
 
-  create_table "users", force: :cascade do |t|
-    t.string "name", null: false
+  create_table "answers", force: :cascade do |t|
+    t.string "body", null: false
+    t.boolean "correct", default: false, null: false
+    t.integer "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -32,6 +35,17 @@ ActiveRecord::Schema.define(version: 2019_02_19_164255) do
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
+  create_table "test_results", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "test_id"
+    t.integer "score"
+    t.string "status", default: "in_progress"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_test_results_on_test_id"
+    t.index ["user_id"], name: "index_test_results_on_user_id"
+  end
+
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 0, null: false
@@ -41,14 +55,19 @@ ActiveRecord::Schema.define(version: 2019_02_19_164255) do
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
-  create_table "answers", force: :cascade do |t|
-    t.string "body", null: false
-    t.boolean "correct", default: false, null: false
-    t.integer "question_id"
+  create_table "user_tests", force: :cascade do |t|
+    t.integer "users_id"
+    t.integer "tests_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["tests_id"], name: "index_user_tests_on_tests_id"
+    t.index ["users_id"], name: "index_user_tests_on_users_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
