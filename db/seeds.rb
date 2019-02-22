@@ -6,17 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+author = User.create(name: "Author")
 user = User.create(name: "Dude")
 
 category_ruby = Category.create(title: "Ruby")
 category_sql = Category.create(title: "SQL")
 category_ror = Category.create(title: "Ruby on Rails")
+category_frontend = Category.create(title: "Frontend")
 
-test_advanced_ruby = Test.create(title: "Advanced Ruby", level: 3, category_id: category_ruby.id)
-test_sql = Test.create(title: "SQL", level: 2, category_id: category_sql.id)
-test_ror_basics = Test.create(title: "RoR Basics", level: 0, category_id: category_ror.id)
-test_html_basics = Test.create(title: "HTML Basics", level: 0)
-test_css_basics = Test.create(title: "CSS Basics", level: 0)
+test_advanced_ruby = Test.create(title: "Advanced Ruby", level: 3, category_id: category_ruby.id, author_id: author.id)
+test_sql = Test.create(title: "SQL", level: 2, category_id: category_sql.id, author_id: author.id)
+test_ror_basics = Test.create(title: "RoR Basics", level: 0, category_id: category_ror.id, author_id: author.id)
+test_html_basics = Test.create(title: "HTML Basics", level: 0, category_id: category_frontend.id, author_id: user.id)
+test_css_basics = Test.create(title: "CSS Basics", level: 0, category_id: category_frontend.id, author_id: user.id)
 
 advanced_ruby_questions = Question.create(
   [

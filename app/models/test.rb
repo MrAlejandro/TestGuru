@@ -1,6 +1,10 @@
 class Test < ApplicationRecord
+  has_many :questions
   has_many :test_results
   has_many :users, through: :test_results
+
+  belongs_to :category
+  belongs_to :author
 
   def self.find_by_category(category_name)
     self
