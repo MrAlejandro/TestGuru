@@ -3,7 +3,9 @@ class User < ApplicationRecord
   has_many :tests, through: :test_results
 
   def find_test_by_level(level)
-    test_ids = self.test_results.pluck(:test_id).uniq
-    Test.where(level: level).where(id: test_ids)
+    Test
+      .joins("LEFT JOIN test_results ON test_results.test_id = tests.id")
+      .where("tests.level = ? AND test_results.user_id = ?", level, id)
+      .distinct
   end
 end
