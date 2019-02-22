@@ -4,7 +4,7 @@ class Test < ApplicationRecord
   has_many :users, through: :test_results
 
   belongs_to :category
-  belongs_to :author
+  belongs_to :author, class_name: "User"
 
   def self.find_by_category(category_name)
     self

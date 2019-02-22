@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :test_results
-  has_many :tests, through: :test_results
+  has_many :tests, foreign_key: :author_id
 
   def find_test_by_level(level)
     Test
