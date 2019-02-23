@@ -9,13 +9,12 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :normal, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
+  scope :by_level, ->(level) { where(level: level) }
+  scope :by_category, ->(name) { Test.joins(:category).where("categories.title LIKE ?", "%#{name}%") }
 
   def self.find_by_category(category_name)
-    self
-      .select("test.title")
-      .joins("JOIN categories ON categories.id = tests.category_id")
-      .where("categories.title LIKE ?", "%#{category_name}%")
-      .order("tests.id DESC")
+    by_category(category_name)
+      .order(id: :DESC)
       .pluck(:title)
   end
 end
