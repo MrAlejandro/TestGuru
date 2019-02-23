@@ -6,35 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-author = User.create(name: "Author")
 user = User.create(name: "Dude")
+author = User.create(name: "Author")
 
 category_ruby = Category.create(title: "Ruby")
+test_advanced_ruby = Test.new(title: "Advanced Ruby", level: 3, category_id: category_ruby.id, author_id: author.id)
+
+q1 = Question.new(body: "What is the difference between lambda and proc?", test_id: test_advanced_ruby.id)
+q2 = Question.new(body: "What is method_missig?", test_id: test_advanced_ruby.id)
+
+q1.answers = [
+    Answer.new(body: "There is no difference.", question_id: q1.id),
+    Answer.new(body: "Lambda cares about number of arguments passed.", question_id: q1.id, correct: true),
+]
+q2.answers = [
+    Answer.new(body: "This method is called when target method not defined.", question_id: q2.id, correct: true),
+    Answer.new(body: "I don't know.", question_id: q2.id),
+]
+test_advanced_ruby.questions = [q1, q2]
+test_advanced_ruby.save
+
 category_sql = Category.create(title: "SQL")
 category_ror = Category.create(title: "Ruby on Rails")
 category_frontend = Category.create(title: "Frontend")
-
-test_advanced_ruby = Test.create(title: "Advanced Ruby", level: 3, category_id: category_ruby.id, author_id: author.id)
 test_sql = Test.create(title: "SQL", level: 2, category_id: category_sql.id, author_id: author.id)
 test_ror_basics = Test.create(title: "RoR Basics", level: 0, category_id: category_ror.id, author_id: author.id)
 test_html_basics = Test.create(title: "HTML Basics", level: 0, category_id: category_frontend.id, author_id: user.id)
 test_css_basics = Test.create(title: "CSS Basics", level: 0, category_id: category_frontend.id, author_id: user.id)
-
-advanced_ruby_questions = Question.create(
-  [
-    {body: "What is the difference between lambda and proc?", test_id: test_advanced_ruby.id},
-    {body: "What is method_missig?", test_id: test_advanced_ruby.id},
-  ]
-)
-
-advanced_ruby_answers = Answer.create!(
-  [
-    {body: "There is no difference.", question_id: advanced_ruby_questions[0].id},
-    {body: "Lambda cares about number of arguments passed.", question_id: advanced_ruby_questions[0].id, correct: true},
-    {body: "This method is called when target method not defined.", question_id: advanced_ruby_questions[1].id, correct: true},
-    {body: "I don't know.", question_id: advanced_ruby_questions[1].id},
-  ]
-)
 
 TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 0.0)
 TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 33.33, status: :complete)

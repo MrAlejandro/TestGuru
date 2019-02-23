@@ -1,5 +1,7 @@
 class Answer < ApplicationRecord
-  belongs_to :question
+  validates :body, presence: true
+
+  belongs_to :question, optional: true
 
   scope :correct, -> { where(correct: true) }
 end
