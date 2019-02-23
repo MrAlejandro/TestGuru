@@ -26,7 +26,8 @@ advanced_ruby_questions = Question.create(
     {body: "What is method_missig?", test_id: test_advanced_ruby.id},
   ]
 )
-advanced_ruby_answers = Answer.create(
+
+advanced_ruby_answers = Answer.create!(
   [
     {body: "There is no difference.", question_id: advanced_ruby_questions[0].id},
     {body: "Lambda cares about number of arguments passed.", question_id: advanced_ruby_questions[0].id, correct: true},

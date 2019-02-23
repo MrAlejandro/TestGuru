@@ -6,6 +6,10 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: "User"
 
+  scope :easy, -> { where(level: 0..1) }
+  scope :normal, -> { where(level: 2..4) }
+  scope :hard, -> { where(level: 5..Float::INFINITY) }
+
   def self.find_by_category(category_name)
     self
       .select("test.title")

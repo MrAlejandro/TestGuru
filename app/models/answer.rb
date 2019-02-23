@@ -1,3 +1,5 @@
 class Answer < ApplicationRecord
-  belongs_to :test
+  belongs_to :question
+
+  scope :correct, -> { where(correct: true) }
 end
