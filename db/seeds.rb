@@ -18,6 +18,8 @@ q2 = Question.new(body: "What is method_missig?", test_id: test_advanced_ruby.id
 q1.answers = [
     Answer.new(body: "There is no difference.", question_id: q1.id),
     Answer.new(body: "Lambda cares about number of arguments passed.", question_id: q1.id, correct: true),
+    Answer.new(body: "Lambda is better on all counts.", question_id: q1.id),
+    Answer.new(body: "Proc terminates currently executed function/method.", question_id: q1.id, correct: true),
 ]
 q2.answers = [
     Answer.new(body: "This method is called when target method not defined.", question_id: q2.id, correct: true),
