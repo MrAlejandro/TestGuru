@@ -1,0 +1,6 @@
+<form action="/tests/<%= test_id %>/questions" method="POST">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token"/>
+  <label for="question_body">Question body</label>
+  <input type="text" name="question[body]" id="question_body" value=""><br>
+  <input type="submit" value="Submit">
+</form>
