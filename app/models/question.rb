@@ -1,4 +1,6 @@
 class Question < ApplicationRecord
+  MAX_NUMBER_OF_ANSWERS = 4
+
   validates :body, presence: true
 
   has_many :answers

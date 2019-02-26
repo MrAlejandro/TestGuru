@@ -1,8 +1,8 @@
 class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_page
 
-  before_action :get_test, only: %i[index new create]
-  before_action :get_question, only: %i[destroy]
+  before_action :find_test, only: %i[index new create]
+  before_action :find_question, only: %i[update edit destroy]
 
   def index
     @questions = @test.questions
@@ -13,30 +13,44 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    render locals: {test_id: @test.id}
+    @question = Question.new
   end
 
   def create
-    question = @test.questions.new(question_params)
-    if question.save
-      redirect_to action: "index", test_id: @test.id
+    @question = @test.questions.new(question_params)
+    if @question.save
+      redirect_to @question
     else
-      redirect_to action: "new", test_id: @test.id
+      render :new
+    end
+  end
+
+  def edit
+    @test = @question.test
+  end
+
+  def update
+    @question.update(question_params)
+    if @question.save
+      redirect_to @question
+    else
+      render :edit
     end
   end
 
   def destroy
+    test_id = @question.test_id
     @question.destroy!
-    render plain: "Removed"
+    redirect_to action: "index", test_id: test_id
   end
 
   private
 
-  def get_test
+  def find_test
     @test = Test.find(params[:test_id])
   end
 
-  def get_question
+  def find_question
     @question = Question.find(params[:id])
   end
 
