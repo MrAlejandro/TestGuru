@@ -1,6 +1,9 @@
 <p><%= @question.body %></p>
+
 <p>Answers:</p>
+
 <ul>
   <%= render partial: "answer", collection: @question.answers %>
 </ul>
+
 <%= link_to "Back to test", test_questions_path(@question.test) %>

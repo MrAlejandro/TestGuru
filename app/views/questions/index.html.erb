@@ -1,5 +1,8 @@
 <h1><%= @test.title %></h1>
+
 <ul>
 <%= render @questions %>
 </ul>
+
+<%= link_to "Tests list", tests_path %>
 <%= link_to "Add question", new_test_question_path(@test) %>
