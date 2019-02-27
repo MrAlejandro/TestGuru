@@ -1,4 +1,4 @@
-<h1>Edit question</h1>
+<h1><%= question_title(@test, @question) %></h1>
 
 <%= form_with model: [@test, @question], local: true do |form| %>
   <% render "form_fields", form: form %>
