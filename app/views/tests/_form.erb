@@ -16,5 +16,7 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
 
-  <%= form.submit %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

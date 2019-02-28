@@ -4,10 +4,6 @@ class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index new create]
   before_action :find_question, only: %i[update edit destroy]
 
-  def index
-    @questions = @test.questions
-  end
-
   def show
     @question = Question.find(params[:id])
   end
@@ -30,8 +26,7 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    @question.update(question_params)
-    if @question.save
+    if @question.update(question_params)
       redirect_to @question
     else
       render :edit
@@ -39,9 +34,8 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    test_id = @question.test_id
     @question.destroy!
-    redirect_to action: "index", test_id: test_id
+    redirect_to test_questions_path(@question.test)
   end
 
   private

@@ -1,7 +1,10 @@
 <%= render "shared/errors", resource: @question %>
+
 <p>
   <%= form.label :body %><br>
   <%= form.text_field :body %>
 </p>
 
-<%= form.submit %>
+<div class="actions">
+  <%= form.submit %>
+</div>
