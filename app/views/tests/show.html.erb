@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= test_level(@test) %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= category %>
+</p>
+
+<%= link_to "Edit", edit_test_path(@test) %>
+<%= link_to "Back", tests_path %>

@@ -1,6 +1,8 @@
 <h1><%= @test.title %></h1>
+
 <ul>
-<% @questions.each do |question| %>
-  <li>Question ID - <%= question.id %>: <%= question.body %></li>
-<% end %>
+<%= render @questions %>
 </ul>
+
+<%= link_to "Tests list", tests_path %>
+<%= link_to "Add question", new_test_question_path(@test) %>
