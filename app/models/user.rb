@@ -1,11 +1,17 @@
 class User < ApplicationRecord
   validates :name, presence: true
 
-  has_many :test_results
-  has_many :tests, -> {distinct}, through: :test_results
+  has_many :test_passages
+  has_many :tests, through: :test_passages
   has_many :created_tests, class_name: "Test", foreign_key: :author_id
 
   def find_test_by_level(level)
     tests.where(level: level)
+  end
+
+  def test_passage(test)
+    test_passages
+      .order(id: :desc)
+      .find_by(test_id: test.id)
   end
 end

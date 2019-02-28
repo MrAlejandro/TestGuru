@@ -35,8 +35,3 @@ test_sql = Test.create(title: "SQL", level: 2, category_id: category_sql.id, aut
 test_ror_basics = Test.create(title: "RoR Basics", level: 0, category_id: category_ror.id, author_id: author.id)
 test_html_basics = Test.create(title: "HTML Basics", level: 0, category_id: category_frontend.id, author_id: user.id)
 test_css_basics = Test.create(title: "CSS Basics", level: 0, category_id: category_frontend.id, author_id: user.id)
-
-TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 0.0)
-TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 33.33, status: :complete)
-TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 55.55, status: :complete)
-TestResult.create(user_id: user.id, test_id: test_advanced_ruby.id, score: 77.77, status: :complete)

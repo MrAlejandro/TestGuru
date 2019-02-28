@@ -1,8 +1,8 @@
 class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_page
 
-  before_action :find_test, only: %i[index new create]
-  before_action :find_question, only: %i[update edit destroy]
+  before_action :set_test, only: %i[index new create]
+  before_action :set_question, only: %i[update edit destroy]
 
   def show
     @question = Question.find(params[:id])
@@ -40,11 +40,11 @@ class QuestionsController < ApplicationController
 
   private
 
-  def find_test
+  def set_test
     @test = Test.find(params[:test_id])
   end
 
-  def find_question
+  def set_question
     @question = Question.find(params[:id])
   end
 
