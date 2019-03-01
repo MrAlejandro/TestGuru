@@ -1,5 +1,9 @@
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
 
+<p>
+  Question number #<%= @test_passage.current_question_number %> (out of <%= @test_passage.questions_number %>)
+</p>
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>
