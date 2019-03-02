@@ -1,7 +1,5 @@
 <%= form_with url: login_path, local: true do |form| %>
-  <% if flash[:alert] %>
-    <%= content_tag :p, flash[:alert], class: "flash alert" %>
-  <% end %>
+  <%= flesh_alert(flash) %>
 
   <p>
     <%= form.label :email %>
