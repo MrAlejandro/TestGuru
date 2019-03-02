@@ -1,9 +1,9 @@
-<li><%= link_to "Question ID - #{question.id}", question_path(question) %>: <%= question.body %>
-  <%= link_to "Delete", question_path(question), method: :delete, confirm: "Are you sure?" %> |
-  <%= link_to "Edit", edit_question_path(question) %>
-
-  <p>Answers:</p>
-  <ul>
-    <%= render partial: "answer", collection: question.answers %>
-  </ul>
+<li>
+  <%= question.body %><br>
+  <%= link_to "Show", question_path(question) %> |
+  <%= link_to "Edit", edit_question_path(question) %> |
+  <%= link_to "Delete",
+              question_path(question),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
 </li>

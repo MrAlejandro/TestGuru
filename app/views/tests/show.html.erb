@@ -13,5 +13,13 @@
   <%= category %>
 </p>
 
-<%= link_to "Edit", edit_test_path(@test) %>
+<h2>Questions</h2>
+
+<%= link_to "New question", new_test_question_path(@test) %>
+
+<ol>
+  <%= render @test.questions %>
+</ol>
+
+<%= link_to "Edit", edit_test_path(@test) %> |
 <%= link_to "Back", tests_path %>
