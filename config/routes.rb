@@ -3,9 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus,
                                path_names: { sign_in: :login, sign_out: :logout }
-  #,
-                               # controllers: { :sessions => "admin/sessions" }
-
 
   resources :tests, only: :index do
     member do
