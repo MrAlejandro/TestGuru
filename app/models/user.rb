@@ -14,8 +14,6 @@ class User < ApplicationRecord
   validates :email, presence: true,
                     format: { with: URI::MailTo::EMAIL_REGEXP },
                     uniqueness: true
-  # validates :name, presence: true
-
 
   def find_test_by_level(level)
     tests.where(level: level)
