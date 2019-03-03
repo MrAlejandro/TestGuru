@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(name: "Dude")
-author = User.create(name: "Author")
+# user = User.create(name: "Dude")
+# author = User.create(name: "Author")
+user = User.create
+author = User.create
 
 category_ruby = Category.create(title: "Ruby")
 test_advanced_ruby = Test.new(title: "Advanced Ruby", level: 3, category_id: category_ruby.id, author_id: author.id)
