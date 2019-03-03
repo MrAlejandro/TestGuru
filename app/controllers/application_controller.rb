@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
   def save_requested_url
     cookies[:redirect_url] = request.original_url
   end
+
+  def after_sign_in_path_for(user)
+    flash[:notice] = "Hello, #{user.first_name}!"
+    user.admin? ? admin_tests_path : cookies[:redirect_url] || tests_path
+  end
 end
