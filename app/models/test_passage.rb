@@ -5,8 +5,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_update :before_update_set_next_question
-  before_validation :before_validation_set_first_question, on: :create
+  before_validation :before_validation_set_next_question, on: %i[create update]
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
@@ -51,19 +50,15 @@ class TestPassage < ApplicationRecord
     current_question.answers.correct
   end
 
-  def before_update_set_next_question
-    self.current_question = next_question
-  end
-
   def next_question
     test
-        .questions
-        .where("id > ?", self.current_question)
-        .order(id: :DESC)
-        .first
+      .questions
+      .where("id > ?", current_question || 0)
+      .order(id: :ASC)
+      .first
   end
 
-  def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+  def before_validation_set_next_question
+    self.current_question = next_question if test.present?
   end
 end
