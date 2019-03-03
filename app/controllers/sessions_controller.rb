@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
     if @user&.authenticate(params[:password])
       login
-      redirect_user
+      redirect_to cookies[:redirect_url] || tests_path
     else
       flash.now[:alert] = "Are you a Guru? Verify your Email and Password please"
       render :new
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_user
+    redirect_to cookies[:redirect_url] || tests_path
   end
 
   private
@@ -30,13 +30,5 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user_id] = nil
-  end
-
-  def redirect_user
-    redirect_to redirect_url
-  end
-
-  def redirect_url
-    cookies[:redirect_url] || tests_path
   end
 end
