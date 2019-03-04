@@ -1,7 +1,0 @@
-<h1><%= question_title(@test, @question) %></h1>
-
-<%= form_with model: [@question], local: true, method: :put do |form| %>
-  <% render "form_fields", form: form %>
-<% end %>
-
-<%= link_to "Back", question_path(@question) %>
