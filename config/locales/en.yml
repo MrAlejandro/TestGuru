@@ -21,12 +21,20 @@ en:
         advanced: "Advanced"
         hard: "Hard"
         hero: "Hero"
+    select:
+      prompt: "Select category"
 
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      header: "Test Guru Project"
+      login: "Login"
+      logout: "Logout"
+      register: "Register"
+      welcome: "Welcome, %{email} Guru"
 
   tests:
     index:
@@ -96,6 +104,10 @@ en:
         success: "Answer has been created"
       update:
         success: "Answer has been updated"
+    nav:
+      welcome: "Welcome, %{name} Guru"
+      logout: "Logout"
+      header: "TestGuru Admin Panel"
 
   test_mailer:
     completed_test:

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def default_url_options
-    { lang: I18n.locale }
+    I18n.locale == I18n.default_locale ? {} : { lang: I18n.locale }
   end
 
   def after_sign_in_path_for(user)

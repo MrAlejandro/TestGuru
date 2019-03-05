@@ -25,6 +25,8 @@ ru:
         advanced: "Продвинутый"
         hard: "Сложный"
         hero: "Героический"
+    select:
+      prompt: "Выберите категорию"
 
   shared:
     errors:
@@ -33,6 +35,12 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      header: "Проект Test Guru"
+      login: "Войти"
+      logout: "Выйти"
+      register: "Зарегистрироваться"
+      welcome: "Добро пожаловать, %{email} гуру"
 
   tests:
     index:
@@ -102,6 +110,10 @@ ru:
         success: "Ответ создан"
       update:
         success: "Ответ обновлен"
+    nav:
+      welcome: "Добро пожаловать, %{name} гуру"
+      logout: "Выйти"
+      header: "Панель администратора TestGuru"
 
   test_mailer:
     completed_test:

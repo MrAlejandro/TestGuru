@@ -11,6 +11,10 @@ ru:
       answer:
         body: "Тело"
         correct: "Правиьный"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Элетронная почта"
 
     errors:
       messages:

@@ -11,6 +11,10 @@ en:
       answer:
         body: "Body"
         correct: "Correct"
+      user:
+        first_name: "Name"
+        last_name: "Surname"
+        email: "Email"
 
     errors:
       messages:
