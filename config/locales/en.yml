@@ -6,11 +6,21 @@ en:
       test:
         create: "Create test"
         update: "Update test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+    tests:
+      level:
+        easy: "Easy"
+        elementary: "Elementary"
+        advanced: "Advanced"
+        hard: "Hard"
+        hero: "Hero"
 
   shared:
     errors:
@@ -21,10 +31,23 @@ en:
   tests:
     index:
       header: "Available tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      actions: "Actions"
+    test:
+      start: "Start"
 
   test_passages:
     result:
       header: "Test %{title} has been completed!"
+      success: "You have passed test with the score: %{score}"
+      failure: "You have failed test with the score: %{score}"
+      back: "Back to list"
+    show:
+      header: "You are passing the %{title} test"
+      progress: "Question number #%{current} (out of %{total})"
+      next: "Next"
 
   admin:
     tests:
@@ -34,6 +57,45 @@ en:
         success: "Test has been updated"
       index:
         header: "Available tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        actions: "Actions"
+        new: "New test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        delete?: "Are you sure?"
+      edit:
+        header: "Edit test"
+        back: "Back to list"
+      new:
+        header: "Create test"
+        back: "Back to list"
+      show:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        questions: "Questions"
+        new_question: "New question"
+        edit: "Edit"
+        back: "Back to list"
+    questions:
+      create:
+        success: "Question has been created"
+      update:
+        success: "Question has been updated"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        delete?: "Are you sure?"
+    answers:
+      create:
+        success: "Answer has been created"
+      update:
+        success: "Answer has been updated"
 
   test_mailer:
     completed_test:

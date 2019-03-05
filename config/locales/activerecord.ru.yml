@@ -2,11 +2,15 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      answer: "Ответ"
 
     attributes:
       test:
         title: "Название"
         category: "Категория"
+      answer:
+        body: "Тело"
+        correct: "Правиьный"
 
     errors:
       messages:

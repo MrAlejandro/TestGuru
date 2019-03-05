@@ -6,11 +6,25 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      answer:
+        body: "Тело"
+        correct: "Правильный"
+        category_id: "Категория"
+    tests:
+      level:
+        easy: "Легкий"
+        elementary: "Начальный"
+        advanced: "Продвинутый"
+        hard: "Сложный"
+        hero: "Героический"
 
   shared:
     errors:
@@ -23,10 +37,23 @@ ru:
   tests:
     index:
       header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      actions: "Действия"
+    test:
+      start: "Начать"
 
   test_passages:
     result:
-      header: "Тесе %{title} был завершен!"
+      header: "Тест %{title} был завершен!"
+      success: "Вы успешно прошли тест с результатом: %{score}"
+      failure: "Вы провалили тест с результатом: %{score}"
+      back: "Вернуться к тестам"
+    show:
+      header: "Вы проходите %{title} тест"
+      progress: "Вопрос номер #%{current} (из %{total})"
+      next: "Следующий"
 
   admin:
     tests:
@@ -36,6 +63,45 @@ ru:
         success: "Тест обновлен"
       index:
         header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        actions: "Действия"
+        new: "Новый тест"
+      test:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        delete?: "Вы уверены?"
+      edit:
+        header: "Редактирование теста"
+        back: "Назад к списку"
+      new:
+        header: "Создание теста"
+        back: "Назад к списку"
+      show:
+        title: "Заголовок"
+        level: "Уровень"
+        category: "Категория"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        edit: "Редактировать"
+        back: "Назад к списку"
+    questions:
+      create:
+        success: "Вопрос создан"
+      update:
+        success: "Вопрос обновлен"
+      question:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        delete?: "Вы уверены?"
+    answers:
+      create:
+        success: "Ответ создан"
+      update:
+        success: "Ответ обновлен"
 
   test_mailer:
     completed_test:

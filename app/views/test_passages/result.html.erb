@@ -2,12 +2,13 @@
 
 <p>
   <% if @test_passage.passed? %>
+    <%= t(".success", score: "<span class=\"test-passed\"><b>#{@test_passage}</b></span>").html_safe %>
     You have passed the test with the score: <span class="test-passed"><b><%= @test_passage %></b></span>
   <% else %>
-    You have failed the test with the score: <span class="test-failed"><b><%= @test_passage %></b></span>
+    <%= t(".failure", score: "<span class=\"test-failed\"><b>#{@test_passage}</b></span>").html_safe %>
   <% end %>
 </p>
 
 <p>
-  <%= link_to "Tests", tests_path %>
+  <%= link_to t(".back"), tests_path %>
 </p>
