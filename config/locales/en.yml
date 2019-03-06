@@ -1,33 +1,114 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    tests:
+      level:
+        easy: "Easy"
+        elementary: "Elementary"
+        advanced: "Advanced"
+        hard: "Hard"
+        hero: "Hero"
+    select:
+      prompt: "Select category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    nav:
+      header: "Test Guru Project"
+      login: "Login"
+      logout: "Logout"
+      register: "Register"
+      welcome: "Welcome, %{email} Guru"
+
+  tests:
+    index:
+      header: "Available tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  test_passages:
+    result:
+      header: "Test %{title} has been completed!"
+      success: "You have passed test with the score: %{score}"
+      failure: "You have failed test with the score: %{score}"
+      back: "Back to list"
+    show:
+      header: "You are passing the %{title} test"
+      progress: "Question number #%{current} (out of %{total})"
+      next: "Next"
+
+  admin:
+    tests:
+      create:
+        success: "Test has been created"
+      update:
+        success: "Test has been updated"
+      index:
+        header: "Available tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        actions: "Actions"
+        new: "New test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        delete?: "Are you sure?"
+      edit:
+        header: "Edit test"
+        back: "Back to list"
+      new:
+        header: "Create test"
+        back: "Back to list"
+      show:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        questions: "Questions"
+        new_question: "New question"
+        edit: "Edit"
+        back: "Back to list"
+    questions:
+      create:
+        success: "Question has been created"
+      update:
+        success: "Question has been updated"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        delete?: "Are you sure?"
+    answers:
+      create:
+        success: "Answer has been created"
+      update:
+        success: "Answer has been updated"
+    nav:
+      welcome: "Welcome, %{name} Guru"
+      logout: "Logout"
+      header: "TestGuru Admin Panel"
+
+  test_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

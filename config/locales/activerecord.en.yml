@@ -1,0 +1,22 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      answer: "Answer"
+
+    attributes:
+      test:
+        title: "Title"
+        category: "Category"
+      answer:
+        body: "Body"
+        correct: "Correct"
+      user:
+        first_name: "Name"
+        last_name: "Surname"
+        email: "Email"
+
+    errors:
+      messages:
+        blank: "can't be blank"
+        required: "is required"

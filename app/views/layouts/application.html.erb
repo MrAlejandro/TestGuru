@@ -10,17 +10,7 @@
   </head>
 
   <body>
-    <p class="nav user">
-      <span class="project-name">
-        <%= link_to "Test Guru Project", root_path %>:
-      </span>
-      <% if user_signed_in? %>
-        Welcome, <b><%= current_user.email %></b> Guru |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "Login", new_user_session_path %> | <%= link_to "Register", new_user_registration_path %>
-      <% end %>
-    </p>
+    <%= render "shared/nav" %>
 
     <%= render "shared/flash" %>
 
