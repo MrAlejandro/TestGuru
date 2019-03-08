@@ -41,6 +41,7 @@ ru:
       logout: "Выйти"
       register: "Зарегистрироваться"
       welcome: "Добро пожаловать, %{email} гуру"
+      panel: "Панель администратора"
 
   tests:
     index:
@@ -114,6 +115,7 @@ ru:
       welcome: "Добро пожаловать, %{name} гуру"
       logout: "Выйти"
       header: "Панель администратора TestGuru"
+      panel: "Панель администратора"
 
   test_mailer:
     completed_test:
