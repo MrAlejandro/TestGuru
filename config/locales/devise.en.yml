@@ -59,7 +59,8 @@ en:
       already_signed_out: "Signed out successfully."
       new:
         header: "Enter the Guru Gates"
-        enter: "Enter"
+        enter_email: "Enter E-mail"
+        remember_me: "Remember me"
     shared:
       links:
         login: "Log in"
