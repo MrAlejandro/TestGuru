@@ -57,6 +57,8 @@ ru:
       new:
         header: "Вход в Test Guru"
         enter: "Войти"
+        enter_email: "Введите E-mail"
+        remember_me: "Запомнить меня"
     shared:
       links:
         login: "Войти"
