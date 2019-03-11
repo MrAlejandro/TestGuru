@@ -57,6 +57,9 @@ en:
       header: "You are passing the %{title} test"
       progress: "Question number #%{current} (out of %{total})"
       next: "Next"
+    gist:
+      success: "Gist have been created. <a target=\"blank\" href=\"%{gist_url}\">View</a>"
+      failure: "Cannot create gist"
 
   admin:
     tests:

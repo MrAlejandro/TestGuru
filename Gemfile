@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 # AUTH
 gem 'devise', '~> 4.0'
 
@@ -45,6 +47,9 @@ gem 'rails-i18n', '~> 5.0.0'
 # UI
 gem 'jquery-rails', '~>4.3.0'
 gem 'bootstrap', '~> 4.0.0.beta'
+
+# API
+gem "octokit", "~> 4.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

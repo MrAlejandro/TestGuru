@@ -64,7 +64,7 @@ ru:
       progress: "Вопрос номер #%{current} (из %{total})"
       next: "Следующий"
     gist:
-      success: "Gist успешно создан"
+      success: "Gist успешно создан. <a target=\"blank\" href=\"%{gist_url}\">Посмотреть</a>"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
