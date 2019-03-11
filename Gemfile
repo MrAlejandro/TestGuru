@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # AUTH
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+gem 'faraday'
+
 # LOCALIZATION
 gem 'rails-i18n', '~> 5.0.0'
 

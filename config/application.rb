@@ -18,5 +18,8 @@ module TestGuru
 
     config.time_zone = "Samara"
     config.i18n.default_locale = :ru
+
+    config.autoload_paths << "#{Rails.root}/lib/clients"
+    config.autoload_paths << "#{Rails.root}/lib/services"
   end
 end
