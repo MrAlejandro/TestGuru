@@ -123,3 +123,8 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  services:
+    gist_question:
+      gist:
+        description: "Вопрос о %{title} c TestGuru"

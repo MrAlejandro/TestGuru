@@ -21,9 +21,8 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    # client = GitHubOctokitClient.new
-    # result = GistQuestionService.new(@test_passage.current_question, client: client).call
-    result = GistQuestionService.new(@test_passage.current_question).call
+    client = GitHubOctokitClient.new
+    result = GistQuestionService.new(@test_passage.current_question, client: client).call
 
     flash_options = if result[:success]
                       { notice: t('.success', gist_url: result[:url]), flash: { html_safe: true } }

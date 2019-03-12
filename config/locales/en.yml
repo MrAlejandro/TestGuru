@@ -117,3 +117,8 @@ en:
   test_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  services:
+    gist_question:
+      gist:
+        description: "A question about %{title} from TestGuru"
