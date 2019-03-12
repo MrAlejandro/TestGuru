@@ -119,6 +119,12 @@ ru:
       logout: "Выйти"
       header: "Панель администратора TestGuru"
       panel: "Панель администратора"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        gist_url: "Ссылка на gist"
+        user: "Автор"
 
   test_mailer:
     completed_test:
@@ -128,3 +134,4 @@ ru:
     gist_question:
       gist:
         description: "Вопрос о %{title} c TestGuru"
+        file_name: 'вопрос-test-guru.txt'

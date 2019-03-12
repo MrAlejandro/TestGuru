@@ -22,18 +22,23 @@ class TestPassagesController < ApplicationController
 
   def gist
     client = GitHubOctokitClient.new
-    result = GistQuestionService.new(@test_passage.current_question, client: client).call
+    @question = @test_passage.current_question
+    result = GistQuestionService.new(@question, client: client).call
 
-    flash_options = if result[:success]
-                      { notice: t('.success', gist_url: result[:url]), flash: { html_safe: true } }
-                    else
-                      { alert: t('.failure') }
-                    end
+    flash_options = { alert: t('.failure') }
+    if result[:success]
+      current_user.gists.create(gist_params(result))
+      flash_options = { notice: t('.success', gist_url: result[:url]), flash: { html_safe: true } }
+    end
 
     redirect_to @test_passage, flash_options
   end
 
   private
+
+  def gist_params(result)
+    { url: result[:url], question_id: @question.id }
+  end
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
