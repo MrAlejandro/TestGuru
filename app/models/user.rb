@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
+  has_many :gists
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: "Test", foreign_key: :author_id

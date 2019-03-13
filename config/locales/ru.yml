@@ -63,6 +63,9 @@ ru:
       header: "Вы проходите %{title} тест"
       progress: "Вопрос номер #%{current} (из %{total})"
       next: "Следующий"
+    gist:
+      success: "Gist успешно создан. <a target=\"blank\" href=\"%{gist_url}\">Посмотреть</a>"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:
@@ -116,7 +119,19 @@ ru:
       logout: "Выйти"
       header: "Панель администратора TestGuru"
       panel: "Панель администратора"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        gist_url: "Ссылка на gist"
+        user: "Автор"
 
   test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  services:
+    gist_question:
+      gist:
+        description: "Вопрос о %{title} c TestGuru"
+        file_name: 'вопрос-test-guru.txt'

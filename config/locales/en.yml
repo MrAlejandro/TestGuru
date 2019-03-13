@@ -14,6 +14,10 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      answer:
+        body: "Body"
+        correct: "Correct"
+        category_id: "Category"
     tests:
       level:
         easy: "Easy"
@@ -57,6 +61,9 @@ en:
       header: "You are passing the %{title} test"
       progress: "Question number #%{current} (out of %{total})"
       next: "Next"
+    gist:
+      success: "Gist have been created. <a target=\"blank\" href=\"%{gist_url}\">View</a>"
+      failure: "Cannot create gist"
 
   admin:
     tests:
@@ -110,7 +117,19 @@ en:
       logout: "Logout"
       header: "TestGuru Admin Panel"
       panel: "Admin panel"
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        gist_url: "Gist url"
+        user: "Author"
 
   test_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  services:
+    gist_question:
+      gist:
+        description: "A question about %{title} from TestGuru"
+        file_name: 'test-guru-question.txt'
