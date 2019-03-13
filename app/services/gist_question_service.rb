@@ -1,13 +1,16 @@
 class GistQuestionService
 
-  def initialize(question, client: nil)
+  def initialize(question)
     @question = question
     @test = @question.test
-    @client = client || GitHubClient.new
+    @client = Octokit::Client.new(access_token: ENV['GITHUB_OAUTH_TOKEN'])
   end
 
   def call
-    @client.create_gist(gist_params)
+    result = @client.create_gist(gist_params)
+    { success: true, url: result[:html_url] }
+  rescue
+    { success: false }
   end
 
   private

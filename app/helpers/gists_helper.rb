@@ -3,7 +3,7 @@ module GistsHelper
 
   def gist_question_url(gist)
     question = gist.question
-    question_beginning = truncate_question(question)
+    question_beginning = truncate(question.body, length: QUESTION_TRUNCATE_LENGTH, omission: "...")
     link_to question_beginning, admin_question_path(question), target: "_blank"
   end
 
@@ -16,11 +16,5 @@ module GistsHelper
 
   def gist_hash(gist)
     gist.url.split("/").last
-  end
-
-  def truncate_question(question)
-    question_beginning = question.body[0...QUESTION_TRUNCATE_LENGTH]
-    question_beginning << '...' if question.body.length > QUESTION_TRUNCATE_LENGTH
-    question_beginning
   end
 end
