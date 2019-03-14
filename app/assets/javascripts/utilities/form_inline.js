@@ -17,8 +17,12 @@ function formInlineLinkHandler(event) {
 }
 
 function formInlineHandler(testId) {
-    var link = document.querySelector('.inline-form-edit-link[data-test-id="' + testId + '"]'),
-        $testTitle = $('.test-title[data-test-id="' + testId + '"]'),
+    var link = document.querySelector('.inline-form-edit-link[data-test-id="' + testId + '"]');
+    if (!link) {
+        return;
+    }
+
+    var $testTitle = $('.test-title[data-test-id="' + testId + '"]'),
         $formInline = $('.form-inline[data-test-id="' + testId + '"]');
 
     $testTitle.toggle();
