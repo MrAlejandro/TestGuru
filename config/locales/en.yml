@@ -97,6 +97,8 @@ en:
         new_question: "New question"
         edit: "Edit"
         back: "Back to list"
+      form_inline:
+        submit: "OK"
     questions:
       create:
         success: "Question has been created"
