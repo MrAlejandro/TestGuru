@@ -2,8 +2,12 @@
 
 <table class="table">
     <thead>
-    <tr>
-      <th scope="col"><%= t(".title") %></th>
+    <tr class="sort-by-title pointer">
+      <th scope="col">
+        <%= t(".title") %>
+        <%= octicon "arrow-up", class: "text-success hide" %>
+        <%= octicon "arrow-down", class: "text-success hide" %>
+      </th>
       <th scope="col"><%= t(".level") %></th>
       <th scope="col"><%= t(".category") %></th>
       <th scope="col"><%= t(".actions") %></th>
