@@ -71,10 +71,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.mail.ru',
       port:                 465,
-      domain:               'frozen-harbor-24857.herokuapp.com',
+      domain:               'mail.ru',
       user_name:            ENV['SMTP_USERNAME'],
       password:             ENV['SMTP_PASSWORD'],
-      authentication:       'plain',
+      authentication:       :plain,
       enable_starttls_auto: true
   }
 
