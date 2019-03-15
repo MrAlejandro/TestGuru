@@ -69,12 +69,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-      address:              'smtp.mail.ru',
-      port:                 465,
-      domain:               'mail.ru',
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'frozen-harbor-24857.herokuapp.com',
       user_name:            ENV['SMTP_USERNAME'],
       password:             ENV['SMTP_PASSWORD'],
-      authentication:       :plain,
+      authentication:       'plain',
       enable_starttls_auto: true
   }
 
