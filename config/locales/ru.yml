@@ -99,6 +99,8 @@ ru:
         new_question: "Новый вопрос"
         edit: "Редактировать"
         back: "Назад к списку"
+      form_inline:
+        submit: "OK"
     questions:
       create:
         success: "Вопрос создан"

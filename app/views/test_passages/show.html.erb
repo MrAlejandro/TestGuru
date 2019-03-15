@@ -4,6 +4,10 @@
   <%= t(".progress", current: @test_passage.current_question_number, total: @test_passage.questions_number ) %>
 </p>
 
+<%= render "shared/progress_bar",
+           current_item: @test_passage.current_question_number,
+           total_items: @test_passage.questions_number %>
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>
