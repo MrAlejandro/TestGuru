@@ -42,6 +42,7 @@ ru:
       register: "Зарегистрироваться"
       welcome: "Добро пожаловать, %{email} гуру"
       panel: "Панель администратора"
+      feedback: "Обратная связь"
 
   tests:
     index:
@@ -52,6 +53,8 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+    start:
+      test_not_ready: "Тест еще не готов"
 
   test_passages:
     result:
@@ -137,3 +140,9 @@ ru:
       gist:
         description: "Вопрос о %{title} c TestGuru"
         file_name: 'вопрос-test-guru.txt'
+
+  feedbacks:
+    new:
+      header: "Оставьте отзыв"
+    create:
+      success: "Отзыв отправлен"

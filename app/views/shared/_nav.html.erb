@@ -7,6 +7,7 @@
       <% if current_user.admin? %>
         <%= link_to t(".panel"), admin_tests_path %> |
       <% end %>
+      <%= link_to t(".feedback"), new_feedback_path %> |
       <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t(".login"), new_user_session_path %> | <%= link_to t(".register"), new_user_registration_path %>

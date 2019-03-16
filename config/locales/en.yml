@@ -40,6 +40,7 @@ en:
       register: "Register"
       welcome: "Welcome, %{email} Guru"
       panel: "Admin panel"
+      feedback: "Feedback"
 
   tests:
     index:
@@ -50,6 +51,8 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+    start:
+      test_not_ready: "The test is not ready yet"
 
   test_passages:
     result:
@@ -135,3 +138,9 @@ en:
       gist:
         description: "A question about %{title} from TestGuru"
         file_name: 'test-guru-question.txt'
+
+  feedbacks:
+    new:
+      header: "Leave feedbacks"
+    create:
+      success: "The feedback has been sent"
