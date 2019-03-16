@@ -1,6 +1,6 @@
 <tr>
   <td scope="row"><%= test.title %></td>
   <td><%= test_level(test) %></td>
-  <td><%= test.questions.count %></td>
+  <td><%= test.category.title %></td>
   <td><%= button_to t(".start"), start_test_path(test), class: "btn btn-primary" %></td>
 </tr>

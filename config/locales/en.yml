@@ -51,6 +51,8 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+    start:
+      test_not_ready: "The test is not ready yet"
 
   test_passages:
     result:

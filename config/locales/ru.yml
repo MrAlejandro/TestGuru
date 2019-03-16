@@ -53,6 +53,8 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+    start:
+      test_not_ready: "Тест еще не готов"
 
   test_passages:
     result:
