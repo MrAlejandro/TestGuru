@@ -41,6 +41,7 @@ en:
       welcome: "Welcome, %{email} Guru"
       panel: "Admin panel"
       feedback: "Feedback"
+      badges: "Badges"
 
   tests:
     index:
@@ -122,6 +123,7 @@ en:
       logout: "Logout"
       header: "TestGuru Admin Panel"
       panel: "Admin panel"
+      badges: "Badges"
     gists:
       index:
         header: "Gists"
@@ -180,3 +182,9 @@ en:
       header: "Leave feedbacks"
     create:
       success: "The feedback has been sent"
+
+  badges:
+    index:
+      header: "Your badges"
+      you_have_no_bages: "You do not have any badges yet"
+      available_badges: "Available badges"

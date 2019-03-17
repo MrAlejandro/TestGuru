@@ -43,6 +43,7 @@ ru:
       welcome: "Добро пожаловать, %{email} гуру"
       panel: "Панель администратора"
       feedback: "Обратная связь"
+      badges: "Бейджи"
 
   tests:
     index:
@@ -124,6 +125,7 @@ ru:
       logout: "Выйти"
       header: "Панель администратора TestGuru"
       panel: "Панель администратора"
+      badges: "Бейджи"
     gists:
       index:
         header: "Gists"
@@ -182,3 +184,9 @@ ru:
       header: "Оставьте отзыв"
     create:
       success: "Отзыв отправлен"
+
+  badges:
+    index:
+      header: "Ваши бейджи"
+      you_have_no_bages: "У вас пока нет бейджев"
+      available_badges: "Существующие бейджи"
