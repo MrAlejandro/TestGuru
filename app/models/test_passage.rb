@@ -7,8 +7,15 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_next_question, on: %i[create update]
 
+  scope :exclude_tests, ->(test_ids) { where("test_id NOT IN (?)", test_ids.is_a?(Array) ? test_ids : [test_ids]) }
+  scope :for_tests, ->(test_ids) { where(test_id: test_ids.is_a?(Array) ? test_ids : [test_ids]) }
+  scope :exclude, ->(passage_ids) { where("id NOT IN (?)", passage_ids.is_a?(Array) ? passage_ids : [passage_ids]) }
+  scope :completed, -> { where(current_question: nil) }
+  scope :passed, -> { completed.where("score >= ?", PASSAGE_PERCENT) }
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.score = score
     save!
   end
 

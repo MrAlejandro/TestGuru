@@ -1,0 +1,20 @@
+<h1><%= t(".header") %></h1>
+
+<p>
+  <% if @user_badges.any? %>
+    <ol>
+      <%= render @user_badges %>
+    </ol>
+  <% else %>
+  <p><%= t(".you_have_no_bages") %></p>
+<% end %>
+</p>
+
+<% if @badges %>
+  <p>
+    <h2><%= t(".available_badges") %></h2>
+    <ol>
+      <%= render @badges %>
+    </ol>
+  </p>
+<% end %>

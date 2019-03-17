@@ -1,0 +1,15 @@
+<tr>
+  <td class="align-middle"><%= badge.name %></td>
+  <td class="align-middle"><%= image_tag(badge.image_url, class: "badge-image") %></td>
+  <td class="align-middle"><%= conditions(badge).html_safe %></td>
+  <td class="align-middle">
+    <%= link_to t(".edit"),
+                edit_admin_badge_path(badge),
+                class: "btn btn-primary" %>
+  </td>
+  <td class="align-middle"><%= link_to t(".delete"),
+                                       admin_badge_path(badge),
+                                       method: :delete,
+                                       class: "btn btn-danger" %>
+  </td>
+</tr>

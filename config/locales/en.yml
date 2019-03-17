@@ -128,6 +128,42 @@ en:
         question: "Question"
         gist_url: "Gist url"
         user: "Author"
+    badges:
+      index:
+        header: "Badges"
+        new: "Create new"
+        name: "Name"
+        image: "Image"
+        conditions: "Conditions"
+        actions: "Actions"
+      create:
+        success: "New badge has been created"
+      update:
+        success: "The badge has been updated"
+      new:
+        header: "New badge"
+        back: "Back to the list"
+      edit:
+        header: "Edit badge"
+        back: "Back to the list"
+      form:
+        quantity_condition: "User has to pass"
+        all_tests: "All tests"
+        any_test: "Any test"
+        category_condition: "From category"
+        level_condition: "That have level"
+        select_level: "Select level"
+        first_try_condition: "With a first try"
+        select_category: "Select category"
+      badge:
+        quantity_condition: "The use should pass <b>%{condition}</b>"
+        from_category: "from the <b>%{title}</b> category"
+        all_tests: "all tests"
+        any_test: "all tests"
+        with_test_level: "that have the <b>%{level}</b> level"
+        from_the_first_try: "from the first try"
+        edit: "Edit"
+        delete: "Delete"
 
   test_mailer:
     completed_test:

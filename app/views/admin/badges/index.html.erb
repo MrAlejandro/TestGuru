@@ -1,0 +1,21 @@
+<h1><%= t(".header") %></h1>
+
+<p>
+  <%= link_to t(".new"), new_admin_badge_path %>
+</p>
+
+<%= render "shared/errors", resource: @test %>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col" class="sort-by-title pointer">
+      <%= t(".name") %>
+    </th>
+    <th scope="col"><%= t(".image") %></th>
+    <th scope="col"><%= t(".conditions") %></th>
+    <th scope="col" colspan="2"><%= t(".actions") %></th>
+  </tr>
+  </thead>
+  <%= render @badges %>
+</table>
