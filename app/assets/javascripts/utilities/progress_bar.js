@@ -1,6 +1,10 @@
 document.addEventListener('turbolinks:load', function () {
-    var progressBarWrapper = document.querySelector('.progress'),
-        progressBar = progressBarWrapper.querySelector('.progress-bar'),
+    var progressBarWrapper = document.querySelector('.progress');
+    if (!progressBarWrapper) {
+        return;
+    }
+
+    var progressBar = progressBarWrapper.querySelector('.progress-bar'),
         currentItem = parseInt(progressBarWrapper.dataset.currentItem),
         totalItems = parseInt(progressBarWrapper.dataset.totalItems);
 

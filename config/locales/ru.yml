@@ -51,8 +51,10 @@ ru:
       level: "Уровень"
       category: "Категория"
       actions: "Действия"
+      time_limit: "Ограничение по времени (мин)"
     test:
       start: "Начать"
+      no_limit: "Нет ограничения"
     start:
       test_not_ready: "Тест еще не готов"
 
@@ -66,6 +68,7 @@ ru:
       header: "Вы проходите %{title} тест"
       progress: "Вопрос номер #%{current} (из %{total})"
       next: "Следующий"
+      time_left: "Осталось времени (сек)"
     gist:
       success: "Gist успешно создан. <a target=\"blank\" href=\"%{gist_url}\">Посмотреть</a>"
       failure: "Во время сохранения gist произошла ошибка"
@@ -81,6 +84,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+        time_limit: "Ограничение по времени (мин)"
         actions: "Действия"
         new: "Новый тест"
       test:
@@ -88,6 +92,7 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         delete?: "Вы уверены?"
+        no_limit: "Нет ограничения"
       edit:
         header: "Редактирование теста"
         back: "Назад к списку"

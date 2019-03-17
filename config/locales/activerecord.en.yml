@@ -8,6 +8,7 @@ en:
       test:
         title: "Title"
         category: "Category"
+        time_limit: "Time limit (min)"
       answer:
         body: "Body"
         correct: "Correct"
