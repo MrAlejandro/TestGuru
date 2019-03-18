@@ -8,7 +8,11 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_next_question, on: %i[create update]
 
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids)
+    if out_of_time?
+      finish_test!
+    else
+      self.correct_questions += 1 if correct_answer?(answer_ids)
+    end
     save!
   end
 
@@ -35,8 +39,27 @@ class TestPassage < ApplicationRecord
       .count
   end
 
+  def out_of_time?
+    limited_in_time? && time_left.negative?
+  end
+
+  def limited_in_time?
+    test.time_limit > 0
+  end
+
+  def time_left
+    return test.time_limit unless created_at
+
+    finish_before = created_at + test.time_limit.minute
+    finish_before - Time.current
+  end
+
   def to_s
     "#{score} %"
+  end
+
+  def finish_test!
+    self.current_question = nil
   end
 
   private
@@ -59,6 +82,6 @@ class TestPassage < ApplicationRecord
   end
 
   def before_validation_set_next_question
-    self.current_question = next_question if test.present?
+    self.current_question = next_question if !out_of_time? && test.present?
   end
 end

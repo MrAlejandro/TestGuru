@@ -1,5 +1,7 @@
 <h1><%= t(".header", title: @test_passage.test.title) %></h1>
 
+<%= timer(@test_passage).html_safe %>
+
 <p>
   <%= t(".progress", current: @test_passage.current_question_number, total: @test_passage.questions_number ) %>
 </p>
@@ -21,5 +23,5 @@
   <% end %>
 
   <p><%= link_to "Gist Question", gist_test_passage_path(@test_passage), method: :post %></p>
-  <p><%= form.submit t(".next"), class: "btn btn-primary" %></p>
+  <p><%= form.submit t(".next"), class: "btn btn-primary btn-next-question" %></p>
 <% end %>

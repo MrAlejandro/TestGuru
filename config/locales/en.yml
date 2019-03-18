@@ -49,8 +49,10 @@ en:
       level: "Level"
       category: "Category"
       actions: "Actions"
+      time_limit: "Time limit (min)"
     test:
       start: "Start"
+      no_limit: " No limit"
     start:
       test_not_ready: "The test is not ready yet"
 
@@ -64,6 +66,7 @@ en:
       header: "You are passing the %{title} test"
       progress: "Question number #%{current} (out of %{total})"
       next: "Next"
+      time_left: "Time left (sec)"
     gist:
       success: "Gist have been created. <a target=\"blank\" href=\"%{gist_url}\">View</a>"
       failure: "Cannot create gist"
@@ -79,6 +82,7 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+        time_limit: "Time limit (min)"
         actions: "Actions"
         new: "New test"
       test:
@@ -86,6 +90,7 @@ en:
         edit: "Edit"
         delete: "Delete"
         delete?: "Are you sure?"
+        no_limit: " No limit"
       edit:
         header: "Edit test"
         back: "Back to list"
