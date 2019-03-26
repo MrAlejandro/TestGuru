@@ -27,13 +27,9 @@ ActiveRecord::Schema.define(version: 2019_03_17_125653) do
   create_table "badges", force: :cascade do |t|
     t.string "name", null: false
     t.string "image_url", null: false
-    t.integer "quantity_condition", null: false
-    t.integer "test_level"
-    t.boolean "first_try", default: false, null: false
-    t.bigint "category_id"
+    t.string "rule_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_badges_on_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -129,7 +125,6 @@ ActiveRecord::Schema.define(version: 2019_03_17_125653) do
   end
 
   add_foreign_key "answers", "questions"
-  add_foreign_key "badges", "categories"
   add_foreign_key "feedbacks", "users"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"

@@ -154,14 +154,9 @@ en:
         header: "Edit badge"
         back: "Back to the list"
       form:
-        quantity_condition: "User has to pass"
-        all_tests: "All tests"
-        any_test: "Any test"
-        category_condition: "From category"
-        level_condition: "That have level"
-        select_level: "Select level"
-        first_try_condition: "With a first try"
-        select_category: "Select category"
+        level: "All tests of a certain level"
+        category: "All tests of a certain category"
+        from_first_attempt: "From the first attempt"
       badge:
         quantity_condition: "The use should pass <b>%{condition}</b>"
         from_category: "from the <b>%{title}</b> category"

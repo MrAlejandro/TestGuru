@@ -13,6 +13,7 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :normal, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
+  scope :by_level, ->(level) { where(level: level) }
   scope :by_category, ->(category_id) { where(category_id: category_id) }
   scope :by_category_name, ->(name) { joins(:category).where("categories.title LIKE ?", "%#{name}%") }
   scope :exclude, ->(test_ids) { where("id NOT IN (?)", test_ids.is_a?(Array) ? test_ids : [test_ids]) }
