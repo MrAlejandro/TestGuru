@@ -3,8 +3,9 @@
     <%= content_tag :span, test.title, class: "test-title", data: { test_id: test.id } %>
     <%= render "form_inline", test: @test == test ? @test : test %>
   </td>
-  <td class="align-middle"><%= test_level(test.level) %></td>
-  <td class="align-middle"><%= test.questions.count %></td>
+  <td class="align-middle"><%= test_level(test) %></td>
+  <td class="align-middle"><%= test.category.title %></td>
+  <td class="align-middle"><%= test.time_limit > 0 ? test.time_limit : t(".no_limit") %></td>
   <td class="align-middle"><%= link_to t(".show"), admin_test_path(test), class: "btn btn-primary" %></td>
   <td class="align-middle">
     <%= link_to t(".edit"),

@@ -8,6 +8,7 @@ ru:
       test:
         title: "Название"
         category: "Категория"
+        time_limit: "Ограничение по времени (мин)"
       answer:
         body: "Тело"
         correct: "Правиьный"
