@@ -21,3 +21,4 @@ en:
       messages:
         blank: "can't be blank"
         required: "is required"
+        only_one_condition: "Only one condition (From category, That have level, With a first try) should be selected"

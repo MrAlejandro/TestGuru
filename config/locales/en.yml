@@ -41,6 +41,7 @@ en:
       welcome: "Welcome, %{email} Guru"
       panel: "Admin panel"
       feedback: "Feedback"
+      badges: "Badges"
 
   tests:
     index:
@@ -127,12 +128,44 @@ en:
       logout: "Logout"
       header: "TestGuru Admin Panel"
       panel: "Admin panel"
+      badges: "Badges"
     gists:
       index:
         header: "Gists"
         question: "Question"
         gist_url: "Gist url"
         user: "Author"
+    badges:
+      index:
+        header: "Badges"
+        new: "Create new"
+        name: "Name"
+        image: "Image"
+        conditions: "Conditions"
+        actions: "Actions"
+      create:
+        success: "New badge has been created"
+      update:
+        success: "The badge has been updated"
+      new:
+        header: "New badge"
+        back: "Back to the list"
+      edit:
+        header: "Edit badge"
+        back: "Back to the list"
+      form:
+        level: "All tests of a certain level"
+        category: "All tests of a certain category"
+        from_first_attempt: "From the first attempt"
+      badge:
+        quantity_condition: "The use should pass <b>%{condition}</b>"
+        from_category: "from the <b>%{title}</b> category"
+        all_tests: "all tests"
+        any_test: "all tests"
+        with_test_level: "that have the <b>%{level}</b> level"
+        from_the_first_try: "from the first try"
+        edit: "Edit"
+        delete: "Delete"
 
   test_mailer:
     completed_test:
@@ -149,3 +182,9 @@ en:
       header: "Leave feedbacks"
     create:
       success: "The feedback has been sent"
+
+  badges:
+    index:
+      header: "Your badges"
+      you_have_no_bages: "You do not have any badges yet"
+      available_badges: "Available badges"

@@ -4,6 +4,7 @@
   <span class="navbar-text">
     <% if user_signed_in? %>
       <%= t(".welcome", email: "<b>#{current_user.email}</b>").html_safe %> |
+      <%= link_to t(".badges"), badges_path %> |
       <% if current_user.admin? %>
         <%= link_to t(".panel"), admin_tests_path %> |
       <% end %>

@@ -43,6 +43,7 @@ ru:
       welcome: "Добро пожаловать, %{email} гуру"
       panel: "Панель администратора"
       feedback: "Обратная связь"
+      badges: "Бейджи"
 
   tests:
     index:
@@ -129,12 +130,41 @@ ru:
       logout: "Выйти"
       header: "Панель администратора TestGuru"
       panel: "Панель администратора"
+      badges: "Бейджи"
     gists:
       index:
         header: "Gists"
         question: "Вопрос"
         gist_url: "Ссылка на gist"
         user: "Автор"
+    badges:
+      index:
+        header: "Бейджи"
+        new: "Созданть новый"
+        name: "Имя"
+        image: "Изображение"
+        conditions: "Условия получения"
+        actions: "Действия"
+      new:
+        header: "Новый бейдж"
+        back: "Назад к списку"
+      create:
+        success: "Бейдж создан"
+      update:
+        success: "Бейдж обновлен"
+      edit:
+        header: "Редатировать бейдж"
+        back: "Назад к списку"
+      form:
+        level: "Пройти все тесты одного уровня"
+        category: "Пройти все тесты из любой категории"
+        from_first_attempt: "Пройти любой тест с первой попытки"
+      badge:
+        level: "Пройти все тесты одного уровня"
+        category: "Пройти все тесты из любой категории"
+        attempt: "Пройти любой тест с первой попытки"
+        edit: "Редактировать"
+        delete: "Удалить"
 
   test_mailer:
     completed_test:
@@ -151,3 +181,9 @@ ru:
       header: "Оставьте отзыв"
     create:
       success: "Отзыв отправлен"
+
+  badges:
+    index:
+      header: "Ваши бейджи"
+      you_have_no_bages: "У вас пока нет бейджев"
+      available_badges: "Существующие бейджи"

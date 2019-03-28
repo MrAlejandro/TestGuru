@@ -1,0 +1,15 @@
+<tr>
+  <td class="align-middle"><%= badge.name %></td>
+  <td class="align-middle"><%= badge_image(badge) %></td>
+  <td class="align-middle"><%= t(".#{badge.rule_name}") %></td>
+  <td class="align-middle">
+    <%= link_to t(".edit"),
+                edit_admin_badge_path(badge),
+                class: "btn btn-primary" %>
+  </td>
+  <td class="align-middle"><%= link_to t(".delete"),
+                                       admin_badge_path(badge),
+                                       method: :delete,
+                                       class: "btn btn-danger" %>
+  </td>
+</tr>

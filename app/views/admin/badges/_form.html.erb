@@ -1,0 +1,32 @@
+<%= render "shared/errors", resource: @badge %>
+
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :name %><br>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image_url %><br>
+    <%= form.text_field :image_url, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label t(".category") %>
+    <%= form.radio_button :rule_name, 'category', id: :rule_name_category, checked: @badge.rule_name.nil? || @badge.rule_name == 'category' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label t(".from_first_attempt") %>
+    <%= form.radio_button :rule_name, 'attempt', id: :rule_name_attempt, checked: @badge.rule_name == 'attempt' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label t(".level") %>
+    <%= form.radio_button :rule_name, 'level', id: :rule_name_level, checked: @badge.rule_name == 'level' %>
+  </div>
+
+  <div class="mt-1">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

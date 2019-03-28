@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :feedbacks, only: %i[new create]
 
+  resources :badges, only: :index
+
   resources :tests, only: :index do
     member do
       post :start
@@ -27,6 +29,9 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+
     resources :gists, only: :index
+
+    resources :badges, except: :show
   end
 end
